@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/diego-aquino/timer.git",
   "author": "diego-aquino <diego.cruz001@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
 }
