@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Roboto, sans-serif;
+}
+
+html,
+body,
+main {
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+#time-container {
+    display: flex;
+    align-items: baseline;
+}
+
+#time-left {
+    font-size: 8rem;
+}
+
+#time-unit {
+    font-size: 5rem;
+}
+
+#time-message {
+    font-size: 1.3rem;
+}
