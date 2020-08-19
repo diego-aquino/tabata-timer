@@ -20,6 +20,18 @@ main {
     flex-direction: column;
 }
 
+main.idle {
+    background-color: #d6d6d6;
+}
+
+main.break {
+    background-color: #20dd6f;
+}
+
+main.running {
+    background-color: #fc4242;
+}
+
 #time-container {
     display: flex;
     align-items: baseline;
