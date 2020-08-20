@@ -1,6 +1,6 @@
 function createScreenManager() {
     const timeLeftElement = document.querySelector('#time-left');
-    const timeMessageElement = document.querySelector('#time-message');
+    const timerMessageElement = document.querySelector('#timer-message');
     const mainElement = document.querySelector('main');
 
     let timer;
@@ -9,7 +9,7 @@ function createScreenManager() {
         timer = timerToAttach;
         timer.subscribe(handleTimerCommand);
         setInitialScreenTimerValue();
-        updateTimeMessage();
+        updateTimerMessage();
     }
 
     const eventsBeingListened = {
@@ -42,11 +42,11 @@ function createScreenManager() {
     ];
 
     function updateScreenStage() {
-        updateTimeMessage();
+        updateTimerMessage();
         updateScreenToNewStageStyles();
     }
 
-    function updateTimeMessage() {
+    function updateTimerMessage() {
         let message;
 
         if (timer.stage == 0) {
@@ -65,7 +65,7 @@ function createScreenManager() {
             message = messages[3];
         }
 
-        timeMessageElement.innerText = message;
+        timerMessageElement.innerText = message;
     }
 
     function updateScreenToNewStageStyles() {
