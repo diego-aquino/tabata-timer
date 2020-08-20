@@ -2,9 +2,9 @@ import interval from './interval.js';
 
 function createTimer() {
     const timer = {
-        schedule: [1000, 500],
+        schedule: [10000, 20000],
         stage: 0,
-        repeatCount: 3,
+        repeatCount: 8,
         totalTimeLapsed: 0,
         stageTimeLapsed: 0,
         running: false
