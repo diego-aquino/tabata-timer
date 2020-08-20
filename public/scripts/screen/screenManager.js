@@ -1,5 +1,6 @@
 function createScreenManager() {
     const timeLeftElement = document.querySelector('#time-left');
+    const timeMessageElement = document.querySelector('#time-message');
     const mainElement = document.querySelector('main');
 
     let timer;
@@ -8,11 +9,12 @@ function createScreenManager() {
         timer = timerToAttach;
         timer.subscribe(handleTimerCommand);
         setInitialScreenTimerValue();
+        updateTimeMessage();
     }
 
     const eventsBeingListened = {
         'update-time-left': updateScreenTimer,
-        'update-stage': setStageStyles
+        'update-stage': updateScreenStage
     };
 
     function handleTimerCommand({ type, ...eventData }) {
@@ -29,23 +31,47 @@ function createScreenManager() {
         timeLeftElement.innerText = newTimeLeft / 1000;
     }
 
-    const stageStyles = ['idle', 'break', 'running'];
-    let currentStageStyle = 0;
+    let currentScreenStage = 0;
+    const modes = ['idle', 'break', 'running'];
+    const messages = [
+        'Press <Enter> to start',
+        'Get ready!',
+        'Take a short break',
+        'Go!',
+        'Done!'
+    ];
 
-    function setStageStyles() {
-        mainElement.classList.remove(stageStyles[currentStageStyle]);
+    function updateScreenStage() {
+        updateTimeMessage();
+        updateScreenToNewStageStyles();
+    }
+
+    function updateTimeMessage() {
+        let message;
 
         if (timer.stage == 0) {
-            currentStageStyle = 0;
-        } else {
-            if (timer.stage % 2 == 1) {
-                currentStageStyle = 1;
+            if (currentScreenStage == 0) {
+                message = messages[0];
             } else {
-                currentStageStyle = 2;
+                message = messages[4];
             }
+        } else if (timer.stage == 1) {
+            if (currentScreenStage == 0) {
+                message = messages[1];
+            } else {
+                message = messages[2];
+            }
+        } else if (timer.stage == 2) {
+            message = messages[3];
         }
 
-        mainElement.classList.add(stageStyles[currentStageStyle]);
+        timeMessageElement.innerText = message;
+    }
+
+    function updateScreenToNewStageStyles() {
+        mainElement.classList.remove(modes[currentScreenStage]);
+        currentScreenStage = timer.stage;
+        mainElement.classList.add(modes[currentScreenStage]);
     }
 
     return {
