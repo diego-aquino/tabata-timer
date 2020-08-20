@@ -1,4 +1,4 @@
-<h1 align="center">Timer</h1>
+<h1 align="center">Tabata Timer</h1>
 
 <p align="center">
     Personal project created to make it easier to track the duration of
@@ -14,10 +14,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com/), [Nod
 
 ```bash
 # clone this repository
-$ git clone https://github.com/diego-aquino/timer.git
+$ git clone https://github.com/diego-aquino/tabata-timer.git
 
 # go to the created directory
-$ cd timer/
+$ cd tabata-timer/
 
 # install all project dependencies automatically
 $ yarn install
@@ -26,7 +26,7 @@ $ yarn install
 $ yarn start
 ```
 
-Now you can visit `http://localhost:3000` to use with the timer!
+Now you can visit `http://localhost:3000` to use with the tabata timer!
 
 ## :newspaper_roll: License
 
