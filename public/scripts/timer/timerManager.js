@@ -17,10 +17,8 @@ function createTimerManager() {
             timer.pause();
         } else {
             if (timer.isFinished()) {
-                console.log('finished');
                 timer.restart();
             } else {
-                console.log('not finished');
                 timer.resume();
             }
         }
