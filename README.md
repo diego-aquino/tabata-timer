@@ -13,20 +13,14 @@
 To clone and run this application, you'll need [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed on your computer. Then, from your command line:
 
 ```bash
-# clone this repository
-$ git clone https://github.com/diego-aquino/tabata-timer.git
+# clone and access this repository
+$ git clone https://github.com/diego-aquino/tabata-timer.git && cd tabata-timer
 
-# go to the created directory
-$ cd tabata-timer/
-
-# install all project dependencies automatically
-$ yarn install
-
-# start lite-server
+# start a local server
 $ yarn start
 ```
 
-Now you can visit `http://localhost:3000` to use with the tabata timer!
+Now you can visit `http://localhost:3000` to check out this tabata timer!
 
 ## :newspaper_roll: License
 
