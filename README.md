@@ -16,6 +16,9 @@ To clone and run this application, you'll need [Git](https://git-scm.com/), [Nod
 # clone and access this repository
 $ git clone https://github.com/diego-aquino/tabata-timer.git && cd tabata-timer
 
+# install the dependencies of the project
+$ yarn
+
 # start a local server
 $ yarn start
 ```
