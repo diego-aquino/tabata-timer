@@ -6,11 +6,11 @@
   "author": "diego-aquino <diego.cruz001@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn lite-server"
+    "start": "yarn http-server ./ --port 3000 -o"
   },
   "devDependencies": {
     "connect-history-api-fallback": "^1.6.0",
-    "lite-server": "^2.5.4"
+    "http-server": "^0.12.3"
   },
   "dependencies": {
     "minimist": "^1.2.5",
